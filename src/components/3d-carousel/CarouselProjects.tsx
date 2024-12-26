@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./style.css";
 import dragon1 from "../../assets/images/dragon_1.jpg";
+import dragon10 from "../../assets/images/dragon_10.jpg";
 import dragon2 from "../../assets/images/dragon_2.jpg";
 import dragon3 from "../../assets/images/dragon_3.jpg";
 import dragon4 from "../../assets/images/dragon_4.jpg";
@@ -9,7 +9,7 @@ import dragon6 from "../../assets/images/dragon_6.jpg";
 import dragon7 from "../../assets/images/dragon_7.jpg";
 import dragon8 from "../../assets/images/dragon_8.jpg";
 import dragon9 from "../../assets/images/dragon_9.jpg";
-import dragon10 from "../../assets/images/dragon_10.jpg";
+import "./style.css";
 
 const images = [
   dragon1,
