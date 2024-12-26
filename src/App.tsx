@@ -5,6 +5,11 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import CarouselProjects from "./components/3d-carousel/CarouselProjects";
 import AppBar from "./components/app-bar/AppBar";
+import MyInfos from "./components/my-infos/MyInfos";
+import Skills from "./components/skills/Skills";
+import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
       >
         <AppBar />
 
+        <MyInfos />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
         <CarouselProjects />
       </div>
     </>

@@ -1,19 +1,29 @@
+:root {
+  --slider-width: 180px;
+  --slider-height: 230px;
+  --slider-top: 10%;
+  --slider-offset: 100px;
+  --perspective: 1200px;
+  --translate-z: 500px;
+}
+
 .banner {
   width: 100%;
   height: 100vh;
   text-align: center;
   overflow: hidden;
   position: relative;
+  margin-top: 200px;
 }
 
 .banner .slider {
   position: absolute;
-  width: var(--slider-width, 200px);
-  height: var(--slider-height, 250px);
-  top: var(--slider-top, 10%);
-  left: calc(50% - var(--slider-offset, 100px));
+  width: var(--slider-width);
+  height: var(--slider-height);
+  top: var(--slider-top);
+  left: calc(50% - var(--slider-offset));
   transform-style: preserve-3d;
-  transform: perspective(var(--perspective, 1200px)) rotateX(-15deg)
+  transform: perspective(var(--perspective)) rotateX(-10deg)
     rotateY(calc(var(--current) * (-360deg / var(--quantity))));
   transition: transform 0.5s ease-in-out;
   will-change: transform;
@@ -23,9 +33,9 @@
   position: absolute;
   inset: 0;
   transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-    translateZ(var(--translate-z, 550px));
+    translateZ(var(--translate-z));
   transition: filter 0.3s ease-in-out, z-index 0.3s ease-in-out;
-  filter: blur(2px);
+  filter: blur(1.5px);
   z-index: 1;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 6px;
@@ -37,18 +47,18 @@
   z-index: 10;
   border: 1px solid rgb(20, 20, 20);
   transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-    translateZ(var(--translate-z, 550px));
+    translateZ(var(--translate-z));
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .banner .slider .item.in-focus:hover {
   transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-    translateZ(var(--translate-z, 550px)) scale(1.05);
+    translateZ(var(--translate-z)) scale(1.05);
 }
 
 .banner .controls {
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -77,6 +87,18 @@
   border-radius: 10px;
 }
 
+/* Ajustes para responsividade */
+@media (max-width: 1024px) {
+  :root {
+    --slider-width: 180px;
+    --slider-height: 230px;
+    --slider-top: 12%;
+    --slider-offset: 90px;
+    --perspective: 1000px;
+    --translate-z: 500px;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --slider-width: 150px;
@@ -94,7 +116,7 @@
     --slider-height: 160px;
     --slider-top: 20%;
     --slider-offset: 60px;
-    --perspective: 1000px;
+    --perspective: 700px;
     --translate-z: 300px;
   }
 }
