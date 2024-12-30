@@ -23,6 +23,7 @@ export default function MyInfos() {
               padding: 3,
             }}
           >
+            falta adicionar os elementos que baixei
             <div
               style={{
                 width: "100%",
