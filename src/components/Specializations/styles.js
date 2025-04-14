@@ -6,9 +6,10 @@ export const SectionContainer = styled.section`
 `
 
 export const SectionTitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
   background: linear-gradient(135deg, 
     ${props => props.theme.colors.primary}, 
     ${props => props.theme.colors.accent});
@@ -16,16 +17,31 @@ export const SectionTitle = styled.h2`
   -webkit-text-fill-color: transparent;
   position: relative;
 
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    font-size: 2.2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
   &::after {
     content: '';
     position: absolute;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
+    width: 40px;
+    height: 3px;
     background: ${props => props.theme.colors.accent};
     border-radius: 2px;
+
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      width: 50px;
+      height: 4px;
+    }
   }
 `
 
