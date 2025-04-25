@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import { ParallaxProvider } from 'react-scroll-parallax'
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles from './styles/GlobalStyles'
-import { theme } from './styles/theme'
-import Header from './components/Header'
-import ImpactSection from './components/ImpactSection'
-import { Container } from './styles/AppStyles'
-import Projects from './components/Projects'
-import Background from './components/Background'
-import LanguageSwitcher from './components/LanguageSwitcher'
-import { LanguageProvider } from './contexts/LanguageContext'
-import Specializations from './components/Specializations'
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { ThemeProvider } from 'styled-components';
+import Background from './components/Background';
+import Header from './components/Header';
+import ImpactSection from './components/ImpactSection';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import Projects from './components/Projects';
+import Specializations from './components/Specializations';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { Container } from './styles/AppStyles';
+import GlobalStyles from './styles/GlobalStyles';
+import { theme } from './styles/theme';
 
 function App() {
   return (
